@@ -1,0 +1,40 @@
+[Eth]
+NetworkId = 11451
+SyncMode = "full"
+NoPruning = false
+NoPrefetch = false
+LightPeers = 100
+DatabaseCache = 512
+DatabaseFreezer = ""
+TrieCleanCache = 256
+TrieCleanCacheJournal = "triecache"
+TrieCleanCacheRejournal = 3600000000000
+TrieDirtyCache = 256
+TrieTimeout = 3600000000000
+EnablePreimageRecording = false
+RPCGasCap = 0
+RPCTxFeeCap = 1e+01
+
+[Node]
+DataDir = "./data"
+HTTPHost = "0.0.0.0"
+HTTPPort = 8545
+HTTPCors = ["*"]
+HTTPVirtualHosts = ["*"]
+HTTPModules = ["eth", "net", "web3", "txpool"]
+WSHost = "0.0.0.0"
+WSPort = 8545
+WSOrigins = ["*"]
+WSModules = ["eth", "net", "web3", "txpool"]
+
+[Node.P2P]
+MaxPeers = 200
+NoDiscovery = false
+StaticNodes = [
+    "enode://677b9ccc524cd62aaf526e2485120086e858f495a398331a29bd9c8ab75d324bf40a35c71638d1c0212a94566d5d1c2c9ea4ebb8c6551f7aa7376f4951cd1fca@124.81.184.85:30303"
+]
+
+[Node.HTTPTimeouts]
+ReadTimeout = 30000000000
+WriteTimeout = 30000000000
+IdleTimeout = 120000000000
